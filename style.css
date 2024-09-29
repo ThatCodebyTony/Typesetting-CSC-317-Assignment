@@ -5,9 +5,9 @@
 }
 
 body {
-  /*1. Give the page a site-wide font-size of 10px (~ 0.625 rem | 1 rem = 16px).*/
+  /* 1. Give the page a site-wide font-size of 10px (~ 0.625 rem | 1 rem = 16px).*/
   font-size: 0.625rem; 
-  /*3. Give your body text a suitable line-height.*/
+  /* 3. Give your body text a suitable line-height.*/
   line-height: 1.5; 
   margin: 0 auto;
   min-width: 1000px;
@@ -51,7 +51,7 @@ header, footer {
 
 /* WRITE YOUR CODE BELOW HERE */
 
-/*2. Give your headings and other element types appropriate font-sizes defined using a suitable relative unit.*/
+/* 2. Give your headings and other element types appropriate font-sizes defined using a suitable relative unit.*/
 h1 { 
   /*4. Center your top level heading on the page.*/
   display: flex;
@@ -65,4 +65,8 @@ h2 {
   font-size: 1.25rem;
   letter-spacing: 0.02rem;
   word-spacing: 0.03rem;;
+}
+/* 7. Give the first paragraph after each heading in the  <section> a little bit of text-indentation, say 1.25 rem. (hint: css property text-indent) */
+section p { /* Only affects paragraphs within <section>*/
+  text-indent: 1.25rem; 
 }
