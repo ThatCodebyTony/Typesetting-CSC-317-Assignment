@@ -5,6 +5,7 @@
 }
 
 body {
+  font-size: 0.625rem; /*1. Give the page a site-wide font-size of 10px (~ 0.625 rem | 1 rem = 16px).*/
   margin: 0 auto;
   min-width: 1000px;
   max-width: 1400px;
