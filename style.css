@@ -50,6 +50,9 @@ header, footer {
 
 /*2. Give your headings and other element types appropriate font-sizes defined using a suitable relative unit.*/
 h1 { 
+  /*4. Center your top level heading on the page.*/
+  display: flex;
+  justify-content: center;
   font-size: 1.7rem; 
 }
 
