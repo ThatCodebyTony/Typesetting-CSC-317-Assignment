@@ -54,6 +54,8 @@ h1 {
   display: flex;
   justify-content: center;
   font-size: 1.7rem; 
+  /* 5. Give your headings a little bit of letter-spacing to make them not too squashed, and allow the letters to breathe a bit. */
+  letter-spacing: 0.1rem;
 }
 
 h2 { 
