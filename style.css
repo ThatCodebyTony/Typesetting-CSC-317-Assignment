@@ -79,9 +79,12 @@ a {
 a:hover{ /* Only affects links when hovered over */
   color: #FFA500;
   text-decoration: none;
+  
 }
 a:focus{ /* Only affects links when selected via keyboard */
   color: #8d5000;
+  /* 3. Remove the default focus outline from ALL the links on the page. */
+  outline: none;
   text-decoration: none;
 }
 a:visited{ /* Only affects visited links */
