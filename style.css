@@ -75,7 +75,19 @@ section p { /* Only affects paragraphs within <section>*/
 a {
   /* 2. Make it so that links are underlined by default, but when you hover or focus them the underline disappears. */
   text-decoration: underline;
+  
+  /* Applies smooth transitions to color and background-color changes over 0.2 seconds, 
+   and to transform changes over 0.1 seconds when the element's state changes. */
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
 }
+/* 4. Give the active state a noticeably different styling so it stands out nicely, 
+but make it still fit in with the overall page design. */
+a:active {
+    background-color: rgba(255, 69, 0, 0.2);
+    color: #FF4500; 
+    transform: scale(0.95); /* changes size of text */ 
+}
+
 a:hover{ /* Only affects links when hovered over */
   color: #FFA500;
   text-decoration: none;
