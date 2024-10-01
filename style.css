@@ -5,16 +5,10 @@
 }
 
 body {
-  /* 1. Give the page a site-wide font-size of 10px (~ 0.625 rem | 1 rem = 16px).*/
-  font-size: 0.625rem; 
-  /* 3. Give your body text a suitable line-height.*/
-  line-height: 1.5; 
   margin: 0 auto;
   min-width: 1000px;
   max-width: 1400px;
-  /* 6. Give your body text some letter-spacing and word-spacing, as appropriate. */
-  letter-spacing: 0.02rem;
-  word-spacing: 0.03rem;
+
 }
 
 /* Layout */
@@ -51,6 +45,15 @@ header, footer {
 
 /* WRITE YOUR CODE BELOW HERE */
 
+p {
+  /* 1. Give the page a site-wide font-size of 10px (~ 0.625 rem | 1 rem = 16px).*/
+  font-size: 0.625rem; 
+  /* 3. Give your body text a suitable line-height.*/
+  line-height: 1.5; 
+  /* 6. Give your body text some letter-spacing and word-spacing, as appropriate. */
+  letter-spacing: 0.02rem;
+  word-spacing: 0.03rem;
+}
 /* 2. Give your headings and other element types appropriate font-sizes defined using a suitable relative unit.*/
 h1 { 
   /*4. Center your top level heading on the page.*/
@@ -128,4 +131,17 @@ a[href*="https://en.wikipedia.org/"]::after {
   transform: translateY(-50%); /* Adjust position */
   width: .5rem; /* Set width of the icon */
   height: .5rem; /* Set height of the icon */
+}
+/* 1. Make sure the spacing of your lists and list items works well with the styling of the overall page. */
+ul {
+  font-size: 0.625rem; 
+  line-height: 1.5; 
+  letter-spacing: 0.02rem;
+  word-spacing: 0.03rem;
+}
+ol {
+  font-size: 0.625rem; 
+  line-height: 1.5; 
+  letter-spacing: 0.02rem;
+  word-spacing: 0.03rem;
 }
