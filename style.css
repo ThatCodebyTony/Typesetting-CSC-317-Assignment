@@ -78,14 +78,12 @@ a {
   
   /* Applies smooth transitions to color and background-color changes over 0.2 seconds, 
    and to transform changes over 0.1 seconds when the element's state changes. */
-  transition: color 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 /* 4. Give the active state a noticeably different styling so it stands out nicely, 
 but make it still fit in with the overall page design. */
 a:active {
-    background-color: rgba(255, 69, 0, 0.2);
-    color: #FF4500; 
-    transform: scale(0.95); /* changes size of text */ 
+  background-color: rgba(255, 123, 123, 0.5);
 }
 
 a:hover{ /* Only affects links when hovered over */
@@ -101,4 +99,16 @@ a:focus{ /* Only affects links when selected via keyboard */
 }
 a:visited{ /* Only affects visited links */
   color: rgb(85, 26, 139);
+}
+/* Ensure consistent hover color regardless of visted/unvisited state */
+a:visited:hover {
+  color: #FFA500; 
+}
+/* Ensure consistent hover color regardless of focus state */
+a:focus:hover {
+  color: #FFA500; 
+}
+/* Switches color to p */
+a:active:hover {
+  color: rgb(85, 26, 139); 
 }
