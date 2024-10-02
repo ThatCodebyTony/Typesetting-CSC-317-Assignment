@@ -145,3 +145,12 @@ ol {
   letter-spacing: 0.02rem;
   word-spacing: 0.03rem;
 }
+
+nav  li {
+  background-color: gray;
+  border: 1px solid blue;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
+  list-style-type: none;
+  text-align: center;
+}
