@@ -8,7 +8,6 @@ body {
   margin: 0 auto;
   min-width: 1000px;
   max-width: 1400px;
-
 }
 
 /* Layout */
@@ -45,6 +44,10 @@ header, footer {
 
 /* WRITE YOUR CODE BELOW HERE */
 
+/*------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------- General text styling: ----------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+
 p {
   /* 1. Give the page a site-wide font-size of 10px (~ 0.625 rem | 1 rem = 16px).*/
   font-size: 0.625rem; 
@@ -54,6 +57,7 @@ p {
   letter-spacing: 0.02rem;
   word-spacing: 0.03rem;
 }
+
 /* 2. Give your headings and other element types appropriate font-sizes defined using a suitable relative unit.*/
 h1 { 
   /*4. Center your top level heading on the page.*/
@@ -63,67 +67,85 @@ h1 {
   /* 5. Give your headings a little bit of letter-spacing to make them not too squashed, and allow the letters to breathe a bit. */
   letter-spacing: 0.1rem;
 }
+
 h2 { 
   font-size: 1.25rem;
   letter-spacing: 0.02rem;
-  word-spacing: 0.03rem;;
+  word-spacing: 0.03rem;
 }
-/* 7. Give the first paragraph after each heading in the  <section> a little bit of text-indentation, say 1.25 rem. (hint: css property text-indent) */
+
+/* 7. Give the first paragraph after each heading in the <section> a little bit of text-indentation, say 1.25 rem. (hint: css property text-indent) */
 section p { /* Only affects paragraphs within <section>*/
   text-indent: 1.25rem; 
 }
 
-/* 1. Give the link, visited, focus, and hover states some colors that go with the color of the horizontal bars at the top and bottom of the page. */
+/*------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------- Links: --------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+
 a {
-  /* 2. Make it so that links are underlined by default, but when you hover or focus them the underline disappears. */
-  text-decoration: underline;
+  /* 1. Give the link, visited, focus, and hover states some colors that go with the color of the horizontal 
+  bars at the top and bottom of the page. */
+  color: #a66; /* Same color for default, visited, hover, and focus states */
   
-  /* Applies smooth transitions to color and background-color changes over 0.2 seconds, 
-   and to transform changes over 0.1 seconds when the element's state changes. */
+  text-decoration: underline;
+
+  /* Applies smooth transitions to color and background-color changes when the link is hovered over, 
+  focused, or activated. */
   transition: color 0.2s ease, background-color 0.2s ease;
 }
+
+a:visited {
+  /* Visited link color */
+  color: #a66; 
+}
+
+a:hover {
+  /* Hover link color */
+  color: #a66; 
+  /* 2. Make it so that links are underlined by default, but when you hover or 
+  focus them the underline disappears. */
+  text-decoration: none; 
+}
+
+a:focus {
+  /* Focus link color */
+  color: #a66; 
+  /* 3. Remove the default focus outline from ALL the links on the page. */
+  outline: none; 
+  text-decoration: none; /* Underline removed on focus */
+}
+
+/* Ensure consistent hover color regardless of visited/unvisited state */
+a:visited:hover {
+  color: #a66; 
+}
+
+/* Ensure consistent hover color regardless of focus state */
+a:focus:hover {
+  color: #a66; 
+}
+
 /* 4. Give the active state a noticeably different styling so it stands out nicely, 
 but make it still fit in with the overall page design. */
 a:active {
-  background-color: rgba(255, 123, 123, 0.5);
-}
-a:hover{ /* Only affects links when hovered over */
-  color: #FFA500;
-  text-decoration: none;
-}
-a:focus{ /* Only affects links when selected via keyboard */
-  color: #8d5000;
-  /* 3. Remove the default focus outline from ALL the links on the page. */
-  outline: none;
-  text-decoration: none;
-}
-a:visited{ /* Only affects visited links */
-  color: rgb(85, 26, 139);
-}
-/* Ensure consistent hover color regardless of visted/unvisited state */
-a:visited:hover {
-  color: #FFA500; 
-}
-/* Ensure consistent hover color regardless of focus state */
-a:focus:hover {
-  color: #FFA500; 
+  color: #0056b3; 
 }
 /* Switches color to p */
 a:active:hover {
-  color: rgb(85, 26, 139); 
+  color: #0056b3; 
 }
 
-/* This selector targets any <a> (anchor) element whose href attribute contains the substring "https://en.wikipedia.org/". 
-   The '*=' operator means "contains," so it will match any Wikipedia link, regardless of what follows the base URL. */
+/* 5. Make it so that external links have the external link icon inserted next to them. */
 a[href*="https://en.wikipedia.org/"] {
   position: relative; /* Necessary for positioning the icon */
   padding-right: 0.8125rem; /* Space for the icon */
 }
-/* 5. Make it so that external links have the external link icon inserted next to them. */
-/* the '::after' let's you put the icon after each hyperlink, kinda like the next word in a sentence */
+
+/* the '::after' lets you put the icon after each hyperlink, kinda like the next word in a sentence */
 a[href*="https://en.wikipedia.org/"]::after {
   content: ""; /* This property creates an empty content area, which is necessary for the ::after pseudo-element to display anything visually. */
-  background: url('external-link-52.png') center right no-repeat; /* Path to your icon center right of hyperlink. */
+  background: url('external-link-52.png') center right no-repeat;
   background-size: contain; /* Resize the icon to fit */
   position: absolute; /* Position it relative to the link */
   right: .25rem; /* Position it inside the link */
@@ -132,17 +154,19 @@ a[href*="https://en.wikipedia.org/"]::after {
   width: .5rem; /* Set width of the icon */
   height: .5rem; /* Set height of the icon */
 }
-/* 1. Make sure the spacing of your lists and list items works well with the styling of the overall page. */
-/* 2. Each list item should have the same line-height as a paragraph line, 
-and each list should have the same spacing at its top and bottom as you have between paragraphs. */
-/* 3. Give your list items a nice bullet appropriate for the design of the page. It is up to you whether you 
-choose a custom bullet image or something else. */
+
+/*------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------- Lists: --------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+
 ul {
+  /* 1. Make sure the spacing of your lists and list items works well with the styling of the overall page. */
   font-size: 0.625rem; 
   line-height: 1.5; 
   letter-spacing: 0.02rem;
   word-spacing: 0.03rem;
 }
+
 ol {
   font-size: 0.625rem; 
   line-height: 1.5; 
@@ -150,21 +174,39 @@ ol {
   word-spacing: 0.03rem;
 }
 
+/* 2. Each list item should have the same line-height as a paragraph line, 
+   and each list should have the same spacing at its top and bottom as you have between paragraphs. */
 nav ul {
   margin-top: 1rem; /* Add top margin to nav lists for spacing */
 }
 
+/* 3. Give your list items a nice bullet appropriate for the design of the page. It is up to you whether you choose a custom bullet image or something else. */
 nav li {
-  padding: 0.5rem; /* Ensure the list items have padding for spacing */
-}
-nav  li {
   border: 1px solid #a66;
-  padding: 0.5rem 1rem;
   margin-bottom: 0.25rem;
   list-style-type: none;
   text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
-/* removes the underline for nav menu */
+
+/*------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------- Navigation menu: --------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+
 nav li a {
-  text-decoration: none;
+  display: block; /* Make the anchor a block element to fill the li */
+  padding: 0.5rem 1rem; /* Makes a larger clickable area */
+  text-decoration: none; 
+  color: inherit; /* Inherit color from li */
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* Change background color of nav menu block on hover */
+nav li:hover {
+  background-color: rgba(178, 222, 231, 0.5); 
+}
+
+/* Change background color of nav menu block when active (clicked) */
+nav li a:active {
+  background-color: lightsteelblue; 
 }
