@@ -139,7 +139,7 @@ a:active:hover {
 /* 5. Make it so that external links have the external link icon inserted next to them. */
 a[href*="https://en.wikipedia.org/"] {
   position: relative; /* Necessary for positioning the icon */
-  padding-right: 0.5rem; /* Space for the icon */
+  padding-right: 0.8125rem; /* Space for the icon */
 }
 
 /* the '::after' lets you put the icon after each hyperlink, kinda like the next word in a sentence */
