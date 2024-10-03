@@ -133,6 +133,10 @@ a[href*="https://en.wikipedia.org/"]::after {
   height: .5rem; /* Set height of the icon */
 }
 /* 1. Make sure the spacing of your lists and list items works well with the styling of the overall page. */
+/* 2. Each list item should have the same line-height as a paragraph line, 
+and each list should have the same spacing at its top and bottom as you have between paragraphs. */
+/* 3. Give your list items a nice bullet appropriate for the design of the page. It is up to you whether you 
+choose a custom bullet image or something else. */
 ul {
   font-size: 0.625rem; 
   line-height: 1.5; 
@@ -146,10 +150,21 @@ ol {
   word-spacing: 0.03rem;
 }
 
+nav ul {
+  margin-top: 1rem; /* Add top margin to nav lists for spacing */
+}
+
+nav li {
+  padding: 0.5rem; /* Ensure the list items have padding for spacing */
+}
 nav  li {
-  border: 1px solid blue;
+  border: 1px solid #a66;
   padding: 0.5rem 1rem;
   margin-bottom: 0.25rem;
   list-style-type: none;
   text-align: center;
+}
+/* removes the underline for nav menu */
+nav li a {
+  text-decoration: none;
 }
