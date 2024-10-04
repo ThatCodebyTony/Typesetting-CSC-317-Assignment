@@ -148,7 +148,7 @@ a[href*="https://en.wikipedia.org/"]::after {
   background: url('external-link-52.png') center right no-repeat;
   background-size: contain; /* Resize the icon to fit */
   position: absolute; /* Position it relative to the link */
-  right: .55rem; /* Position it inside the link */
+  right: .01rem; /* Position it inside the link */
   top: 50%; /* Center vertically */
   transform: translateY(-50%); /* Adjust position */
   width: .5rem; /* Set width of the icon */
