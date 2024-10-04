@@ -197,7 +197,7 @@ nav li a {
   display: block; /* Make the anchor a block element to fill the li */
   padding: 0.5rem 1rem; /* Makes a larger clickable area */
   text-decoration: none; 
-  color: inherit; /* Inherit color from li */
+  color: #a66; /* Inherit color from li */
   transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
