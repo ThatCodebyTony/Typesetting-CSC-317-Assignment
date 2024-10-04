@@ -47,7 +47,7 @@ header, footer {
 /*------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------- General text styling: ----------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------*/
-
+/*
 p {
   /* 1. Give the page a site-wide font-size of 10px (~ 0.625 rem | 1 rem = 16px).*/
   font-size: 0.625rem; 
@@ -57,6 +57,7 @@ p {
   letter-spacing: 0.02rem;
   word-spacing: 0.03rem;
 }
+*/ 
 
 /* 2. Give your headings and other element types appropriate font-sizes defined using a suitable relative unit.*/
 h1 { 
@@ -77,11 +78,20 @@ h2 {
 /* 7. Give the first paragraph after each heading in the <section> a little bit of text-indentation, say 1.25 rem. (hint: css property text-indent) */
 section p { /* Only affects paragraphs within <section>*/
   text-indent: 1.25rem; 
+  font-size: 0.625rem; 
+  /* 3. Give your body text a suitable line-height.*/
+  line-height: 1.5; 
+  /* 6. Give your body text some letter-spacing and word-spacing, as appropriate. */
+  letter-spacing: 0.02rem;
+  word-spacing: 0.03rem;
 }
 
 /*------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------- Links: --------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------*/
+
+secion p {
+}
 
 a {
   /* 1. Give the link, visited, focus, and hover states some colors that go with the color of the horizontal 
@@ -93,6 +103,9 @@ a {
   /* Applies smooth transitions to color and background-color changes when the link is hovered over, 
   focused, or activated. */
   transition: color 0.2s ease, background-color 0.2s ease;
+}
+a: link {
+text-decoration: none;
 }
 
 a:visited {
