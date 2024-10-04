@@ -48,7 +48,7 @@ header, footer {
 /*----------------------------------------------- General text styling: ----------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------*/
 
-p {
+section p {
   /* 1. Give the page a site-wide font-size of 10px (~ 0.625 rem | 1 rem = 16px).*/
   font-size: 0.625rem; 
   /* 3. Give your body text a suitable line-height.*/
@@ -86,7 +86,7 @@ section p { /* Only affects paragraphs within <section>*/
 a {
   /* 1. Give the link, visited, focus, and hover states some colors that go with the color of the horizontal 
   bars at the top and bottom of the page. */
-  color: #a66; /* Same color for default, visited, hover, and focus states */
+  color: rgb(42, 85, 146); /* Same color for default, visited, hover, and focus states */
   
   text-decoration: underline;
 
@@ -100,14 +100,6 @@ a:visited {
   color: #a66; 
 }
 
-a:hover {
-  /* Hover link color */
-  color: #a66; 
-  /* 2. Make it so that links are underlined by default, but when you hover or 
-  focus them the underline disappears. */
-  text-decoration: none; 
-}
-
 a:focus {
   /* Focus link color */
   color: #a66; 
@@ -115,15 +107,12 @@ a:focus {
   outline: none; 
   text-decoration: none; /* Underline removed on focus */
 }
-
-/* Ensure consistent hover color regardless of visited/unvisited state */
-a:visited:hover {
+a:hover {
+  /* Hover link color */
   color: #a66; 
-}
-
-/* Ensure consistent hover color regardless of focus state */
-a:focus:hover {
-  color: #a66; 
+  /* 2. Make it so that links are underlined by default, but when you hover or 
+  focus them the underline disappears. */
+  text-decoration: none; 
 }
 
 /* 4. Give the active state a noticeably different styling so it stands out nicely, 
@@ -158,6 +147,7 @@ a[href*="https://en.wikipedia.org/"]::after {
 /*--------------------------------------------------- Lists: --------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------*/
 
+/* 3. Give your list items a nice bullet appropriate for the design of the page. It is up to you whether you choose a custom bullet image or something else. */
 ul {
   /* 1. Make sure the spacing of your lists and list items works well with the styling of the overall page. */
   font-size: 0.625rem; 
@@ -179,14 +169,6 @@ nav ul {
   margin-top: 1rem; /* Add top margin to nav lists for spacing */
 }
 
-/* 3. Give your list items a nice bullet appropriate for the design of the page. It is up to you whether you choose a custom bullet image or something else. */
-nav li {
-  border: 1px solid #a66;
-  margin-bottom: 0.25rem;
-  list-style-type: none;
-  text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease; 
-}
 
 /*------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------- Navigation menu: --------------------------------------------*/
@@ -197,6 +179,14 @@ nav li a {
   padding: 0.5rem 1rem; /* Makes a larger clickable area */
   text-decoration: none; 
   color: #a66; /* Inherit color from li */
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+nav li {
+  border: 1px solid #a66;
+  margin-bottom: 0.25rem;
+  list-style-type: none;
+  text-align: center;
   transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
